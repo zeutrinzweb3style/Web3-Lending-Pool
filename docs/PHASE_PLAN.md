@@ -1,12 +1,12 @@
 # Implementation Phases
 
-**Status: Proposed revision.** Phases are sequential. Coding may begin in Phase 1, but only for a non-financial application foundation. Each phase requires its exit criteria and product-owner handoff approval before the next phase starts. Current status is in `PHASE_STATUS.md`; the proposed Phase 1 implementation details are in the root `plan.md`.
+**Status: Approved sequential workflow (2026-11-23); the Phase 1 foundation-only scope is approved.** Phases are sequential. Coding may begin in Phase 1, but only for a non-financial application foundation. Each phase requires its exit criteria and product-owner handoff approval before the next phase starts. Current status is in `PHASE_STATUS.md`; the approved Phase 1 implementation details are in the root `plan.md`.
 
 ## Phase 1 — Repository and application foundation (code)
 
-**Scope:** Establish the frontend project/toolchain, directory structure, formatting/type-check/build commands, basic automated checks, environment-variable example conventions, and a minimal app shell. No production backend, public API, database, wallet transactions, KYC, loan/deposit/repayment logic, or real personal/financial data. Proposed stack and layout are subject to approval in `plan.md` before implementation.
+**Scope:** Establish the frontend project/toolchain, directory structure, formatting/type-check/build commands, basic automated checks, and a minimal app shell. No production backend, public API, database, wallet transactions, KYC, loan/deposit/repayment logic, or real personal/financial data. The approved stack is React + TypeScript + Vite, pnpm, and `apps/web/`; this approval is limited to the foundation and does not approve product functionality.
 
-**Exit criteria:** Product owner approves `plan.md`; scaffold installs and builds; lint/type checks pass; only a non-functional shell exists; docs and handoff accurately record files and checks; unresolved financial/legal/privacy decisions remain marked TBD. Do not claim Phase 1 complete merely because the scaffold builds.
+**Exit criteria:** Product owner approves `plan.md`; scaffold installs and builds; lint/type checks pass; only a non-functional shell exists; docs and handoff accurately record files and checks; unresolved financial/legal/privacy decisions remain marked TBD. Do not claim Phase 1 complete merely because the scaffold builds; the product owner must review and approve the handoff before phase closure.
 
 ## Phase 2 — Product decisions, user flows, and system design
 

@@ -1,29 +1,40 @@
-# Phase 1 Handoff — Revised Scope Proposal
+# Phase 1 Handoff — Frontend Foundation
 
-**Status:** Phase 1 has not started and is not complete. This file records a proposed change to Phase 1, pending product-owner approval of `plan.md`.
+**Status:** The approved non-functional scaffold has been implemented and validated on branch `docs/phase1-code-bootstrap` in [PR #2](https://github.com/zeutrinzweb3style/Web3-Lending-Pool/pull/2). **Phase 1 is not complete:** product-owner review and explicit handoff approval are still required. Phase 2 has not started.
 
-## What changed
+- **Date:** 2026-11-23
+- **Responsible developer:** Manus
+- **Approved scope:** React + TypeScript + Vite, pnpm, `apps/web/`, synthetic placeholder journeys, and a non-functional app shell only.
 
-The previous proposal treated Phase 1 as product requirements and documentation only. The revised proposal makes Phase 1 a safe repository/application foundation coding phase. Product decisions and functional UI work move to later gated phases.
+## Delivered work
 
-## Prepared in this revision
+- Added the React 19, TypeScript, and Vite 6 app in `apps/web/`, with responsive overview, clearly labeled draft parameters, and placeholder lender/borrower journeys.
+- Added a pnpm 10.18.0 workspace, pinned package-manager metadata, lockfile, root scripts, ESLint/Prettier configuration, and `.gitignore` rules for dependencies, build output, and environment secrets.
+- Added the single-route static manifest at `apps/web/public/manus-routes.json` and two tests that assert the prototype-only status and draft values.
+- Updated `README.md`, `plan.md`, `TODO.md`, `docs/DECISIONS.md`, `docs/PHASE_PLAN.md`, and `docs/PHASE_STATUS.md` to reflect the approved scaffold scope and preserve the sequential phase gates.
 
-- Revised sequential phase plan.
-- Revised phase status tracker.
-- Revised decision log and developer instructions.
-- Proposed `plan.md` for a non-functional frontend scaffold.
+## Checks performed
 
-## Work not performed
+All checks below were run in the GitHub repository checkout with pnpm 10.18.0:
 
-- No application scaffold or product code has been written.
-- No software tests or builds have been run.
-- No contract, API, backend, wallet integration, KYC, real user data, testnet, mainnet, or real-fund activity exists.
-- No product-owner approval of the proposed technology stack or shell design is recorded.
+- `pnpm install --frozen-lockfile` — passed; lockfile was up to date.
+- `pnpm ignored-builds` — passed; no ignored build scripts were reported.
+- `pnpm typecheck` — passed.
+- `pnpm lint` — passed with zero warnings.
+- `pnpm test` — passed; 1 test file, 2 tests.
+- `pnpm format:check` — passed for app source and toolchain configuration.
+- `pnpm build` — passed.
+- Local Vite smoke check — `GET /` returned HTTP 200 and the expected app title; `GET /manus-routes.json` returned HTTP 200 with the single root route.
+- Visual review — desktop at 1280×900 and mobile at 375×812; the decorative mobile hero labels were removed to avoid overlap with copy.
 
-## Approval blockers
+## Scope and limitations
 
-The product owner must approve or revise the framework, package manager, app directory, and shell scope in `plan.md` before code implementation begins. The open economic, chain, eligibility, identity, default, and emergency-control decisions remain in `docs/DECISIONS.md` and block the relevant later phases.
+The app contains synthetic planning content only and has no enabled financial actions. No backend, database, public or external API, wallet integration, smart contract, KYC flow, real funds, personal data, or secrets were added. Draft values shown in the shell are not finalized product terms. The shell is not production-ready; no independent security, legal, privacy, or accessibility review was performed.
 
-## Next action
+## Open decisions and blockers
 
-After approval, implement only the foundation described in `plan.md`, record actual checks, and update `docs/PHASE_STATUS.md`. Do not mark Phase 1 complete until all exit criteria are met and the handoff is reviewed.
+The following remain proposed or TBD and must not be guessed or implemented: exact network and canonical USDT token; amount precision and repayment rounding; the 25% flat-interest proposal and lender/owner split plus disclosures; refund timing and liquidity rules; borrower eligibility, country exclusions, and age/income criteria; identity-provider selection, data handling, retention, appeals, and access; repayment/default/collections policy; loan allocation across lenders; key custody; and whether any emergency pause/resume control is acceptable. See `docs/DECISIONS.md`, `docs/PRODUCT_SPEC.md`, and `docs/SECURITY_AND_PRIVACY.md`.
+
+## Next step
+
+The product owner should review the delivered scaffold against `plan.md`, this handoff, and the Phase 1 exit criteria in `docs/PHASE_PLAN.md`. Only after explicit approval should Phase 1 be marked complete and Phase 2 work begin. Until then, keep Phase 1 open and do not expand the app beyond the approved shell.

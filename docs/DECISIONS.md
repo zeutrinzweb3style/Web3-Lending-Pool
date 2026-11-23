@@ -10,8 +10,9 @@ Use this file to distinguish user-directed project scope from draft proposals an
 | Repayments | Ordinary USDT payments; do not use Superfluid streaming | Accepted direction |
 | Initial lender asset | USDT only for the initial plan | Accepted direction; network/token TBD |
 | API | Do not add a public API in the current plan | Accepted direction |
-| Phase order | Developers work sequentially; every phase requires a handoff and approval | Accepted direction |
-| Phase 1 coding | Begin coding with a safe app/repository foundation only; no loan/fund/KYC behavior | Proposed scope; awaiting approval of `plan.md` and stack |
+| Phase order | Developers work sequentially; every phase requires a handoff and product-owner approval | Accepted direction |
+| Phase 1 coding | Safe app/repository foundation only; no loan/fund/KYC behavior | Approved by product owner on 2026-11-23 |
+| Phase 1 stack and shell | React + TypeScript + Vite, pnpm, `apps/web/`, non-functional placeholder journeys | Approved for Phase 1 scaffold only on 2026-11-23; no later product behavior approved |
 | Lender minimum deposit | 200 USDT | Proposed requirement; product-owner confirmation needed |
 | Borrower loan range | 100–10,000 USDT | Proposed requirement; product-owner confirmation needed |
 | Loan term | One year with monthly repayments | Proposed requirement; product-owner confirmation needed |
@@ -40,9 +41,8 @@ Use this file to distinguish user-directed project scope from draft proposals an
 9. Which identity-verification provider and fields are needed? What retention/deletion periods, appeals, and manual-review rules apply?
 10. Emergency controls: is a narrow multisig pause for new approvals/disbursements acceptable while preserving repayments and permitted withdrawals, or is there to be no pause at all?
 11. Which wallet/admin/owner treasury key model is required (e.g., multisig), and who can change contract parameters, if anyone?
-12. Which Phase 1 framework/package manager and repository layout are approved? See proposed `plan.md`.
-13. Who approves each phase transition?
+12. Who approves each phase transition and what evidence is required for approval?
 
 ## Change record
 
-No product-owner approvals recorded yet. Add dated entries here when decisions are made.
+- **2026-11-23 — Product owner:** Approved the sequential phase workflow and the Phase 1 technical stack and non-functional shell scope described in `plan.md`. Rationale: establish a safe, reviewable frontend foundation while keeping lending, identity, funds, contracts, and production activity gated. No economic, legal, eligibility, network, identity-processing, or emergency-control decision was approved by this change.
