@@ -1,7 +1,7 @@
 # Phase Status
 
-Current phase: **Phase 1 — Repository and application foundation**  
-Status: **Proposed; awaiting product-owner approval of the revised plan and stack**  
+Current phase: **Phase 1 — Repository and application foundation**
+Status: **Proposed; awaiting product-owner approval of the revised plan and stack**
 Last updated: 2026-11-23  
 Updated by: Manus (phase-plan revision)
 
