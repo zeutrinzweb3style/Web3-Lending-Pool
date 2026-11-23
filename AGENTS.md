@@ -2,14 +2,15 @@
 
 ## Before starting work
 
-1. Read `README.md`, `docs/PRODUCT_SPEC.md`, `docs/PHASE_PLAN.md`, `docs/DECISIONS.md`, `docs/SECURITY_AND_PRIVACY.md`, and `docs/PHASE_STATUS.md`.
+1. Read `README.md`, `AGENTS.md`, `plan.md`, `docs/PRODUCT_SPEC.md`, `docs/PHASE_PLAN.md`, `docs/DECISIONS.md`, `docs/SECURITY_AND_PRIVACY.md`, and `docs/PHASE_STATUS.md`.
 2. Check the current phase and its approved scope. Do not start a later phase until the prior phase's exit criteria and handoff have been reviewed and approved by the product owner.
 3. Treat every item labeled `TBD`, `proposed`, `requires review`, or `not approved` as unresolved. Do not make a product or legal decision by guessing.
 
 ## Scope and safety
 
-- This is a planning-only repository until the product owner explicitly approves implementation work.
+- Follow `docs/PHASE_PLAN.md` in order. Phase 1 permits only the approved repository/app foundation and non-functional shell; it does not authorize lending features.
 - Do not deploy contracts, move funds, request real USDT, or use real borrower/lender data without explicit project authorization and completion of the relevant security, privacy, and legal gates.
+- Do not add a public API unless the product owner changes this direction in `docs/DECISIONS.md`.
 - Never commit secrets, seed phrases, private keys, credentials, or real identity information.
 - Never put government-ID images, selfies, biometric data, or personal addresses on a public blockchain or in public repository files/issues.
 - Do not implement an admin withdrawal path for lender principal. Any proposed emergency control must be narrowly scoped, documented, reviewed, and explicitly approved.

@@ -1,0 +1,22 @@
+{
+  "name": "web3-lending-pool",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.18.0",
+  "scripts": {
+    "dev": "pnpm --filter @lendpool/web dev",
+    "build": "pnpm --filter @lendpool/web build",
+    "typecheck": "pnpm --filter @lendpool/web typecheck",
+    "test": "pnpm --filter @lendpool/web test",
+    "lint": "eslint apps/web/src --max-warnings=0",
+    "format:check": "prettier --check package.json pnpm-workspace.yaml eslint.config.js apps/web/index.html apps/web/package.json apps/web/tsconfig.json apps/web/vite.config.ts apps/web/vitest.config.ts apps/web/public/manus-routes.json apps/web/src"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.0",
+    "eslint": "^9.30.0",
+    "globals": "^16.3.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.35.1"
+  }
+}
