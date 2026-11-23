@@ -1,37 +1,29 @@
-# Phase 1 Handoff — Initial Planning Draft
+# Phase 1 Handoff — Revised Scope Proposal
 
-**Status:** Incomplete; awaiting product-owner review. This is an initial handoff of draft planning files, not a declaration that Phase 1 is complete.
+**Status:** Phase 1 has not started and is not complete. This file records a proposed change to Phase 1, pending product-owner approval of `plan.md`.
 
-## Scope prepared
+## What changed
 
-- Repository README and developer/AI-agent working rules.
-- Draft product proposal, implementation phases, decision log, privacy/security requirements, and phase tracker.
+The previous proposal treated Phase 1 as product requirements and documentation only. The revised proposal makes Phase 1 a safe repository/application foundation coding phase. Product decisions and functional UI work move to later gated phases.
 
-## Files prepared
+## Prepared in this revision
 
-- `README.md`
-- `AGENTS.md`
-- `docs/PRODUCT_SPEC.md`
-- `docs/PHASE_PLAN.md`
-- `docs/DECISIONS.md`
-- `docs/SECURITY_AND_PRIVACY.md`
-- `docs/PHASE_STATUS.md`
-- `docs/handoffs/PHASE_01_HANDOFF.md`
+- Revised sequential phase plan.
+- Revised phase status tracker.
+- Revised decision log and developer instructions.
+- Proposed `plan.md` for a non-functional frontend scaffold.
 
 ## Work not performed
 
-- No application or smart-contract code was written.
-- No tests were run because there is no implementation yet.
-- No legal opinion, security audit, production KYC, testnet deployment, mainnet deployment, or real-fund handling was performed.
+- No application scaffold or product code has been written.
+- No software tests or builds have been run.
+- No contract, API, backend, wallet integration, KYC, real user data, testnet, mainnet, or real-fund activity exists.
+- No product-owner approval of the proposed technology stack or shell design is recorded.
 
-## Open blockers
+## Approval blockers
 
-See `docs/DECISIONS.md`. Key blockers include final chain and USDT contract, interest/repayment and APR disclosures, refund and loan allocation rules, country/age/identity eligibility, privacy provider and retention, default/late-payment policy, admin emergency controls, and Phase 1 acceptance/approval.
+The product owner must approve or revise the framework, package manager, app directory, and shell scope in `plan.md` before code implementation begins. The open economic, chain, eligibility, identity, default, and emergency-control decisions remain in `docs/DECISIONS.md` and block the relevant later phases.
 
-## Recommended next work
+## Next action
 
-Product owner reviews the draft and resolves the blocking decisions. Update the product spec and decision log before marking Phase 1 complete. Phase 2 must not start until the Phase 1 exit criteria are met and the handoff is approved.
-
-## Checks performed
-
-Documentation drafting only. No software tests or external compliance/security reviews were run.
+After approval, implement only the foundation described in `plan.md`, record actual checks, and update `docs/PHASE_STATUS.md`. Do not mark Phase 1 complete until all exit criteria are met and the handoff is reviewed.

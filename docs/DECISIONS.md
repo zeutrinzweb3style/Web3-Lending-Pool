@@ -1,6 +1,6 @@
 # Decision Log
 
-Use this file to distinguish user-directed project scope from draft proposals and unresolved decisions. A discussion in chat is not automatically a final legal, economic, or implementation approval. Update this log when decisions are approved; include date, approver, and any rationale.
+Use this file to distinguish user-directed project scope from draft proposals and unresolved decisions. A discussion in chat is not automatically a final legal, economic, or implementation approval. Update this log when decisions are approved; include date, approver, and rationale.
 
 ## Current direction from planning discussion
 
@@ -9,6 +9,9 @@ Use this file to distinguish user-directed project scope from draft proposals an
 | Repository | Keep this project separate from `Kwento-Fi` | Accepted direction |
 | Repayments | Ordinary USDT payments; do not use Superfluid streaming | Accepted direction |
 | Initial lender asset | USDT only for the initial plan | Accepted direction; network/token TBD |
+| API | Do not add a public API in the current plan | Accepted direction |
+| Phase order | Developers work sequentially; every phase requires a handoff and approval | Accepted direction |
+| Phase 1 coding | Begin coding with a safe app/repository foundation only; no loan/fund/KYC behavior | Proposed scope; awaiting approval of `plan.md` and stack |
 | Lender minimum deposit | 200 USDT | Proposed requirement; product-owner confirmation needed |
 | Borrower loan range | 100–10,000 USDT | Proposed requirement; product-owner confirmation needed |
 | Loan term | One year with monthly repayments | Proposed requirement; product-owner confirmation needed |
@@ -28,16 +31,17 @@ Use this file to distinguish user-directed project scope from draft proposals an
 
 1. Which chain and exact canonical USDT token contract will be used? How will chain switching and wrong-token deposits be prevented?
 2. Are all proposed amounts denominated in USDT, and what precision/rounding rules apply?
-3. Does the 7-day refund window begin at deposit confirmation? What happens to already approved but unaccepted offers, and is refund immediate or queued?
+3. Does the 7-day refund window begin at deposit confirmation? What happens to approved but unaccepted offers, and is refund immediate or queued?
 4. Can a loan be funded by only one lender, or can multiple lenders share one loan? How are repayments allocated across lenders?
 5. What is the exact due-date schedule, payment allocation order, partial-payment behavior, grace period, early payoff formula, late/default policy, and collections/dispute process?
 6. Is 25% flat/add-on interest legally permitted in intended markets? What disclosures and caps apply? Is the 80/20 split approved, and what costs, taxes, or protocol expenses exist?
-7. Which countries and borrower types are eligible? India and Bangladesh were proposed as excluded jurisdictions in discussion, but the policy is not approved. Define the relevant basis (residence, location, or other lawful criterion) and obtain legal review before collecting identity data.
+7. Which countries and borrower types are eligible? India and Bangladesh were proposed as excluded jurisdictions in discussion, but the policy is not approved. Define the relevant basis and obtain legal review before collecting identity data.
 8. What minimum age and evidence of Web3 employment/income are required? How are unaffiliated, self-employed, or privacy-preserving applicants handled?
 9. Which identity-verification provider and fields are needed? What retention/deletion periods, appeals, and manual-review rules apply?
 10. Emergency controls: is a narrow multisig pause for new approvals/disbursements acceptable while preserving repayments and permitted withdrawals, or is there to be no pause at all?
 11. Which wallet/admin/owner treasury key model is required (e.g., multisig), and who can change contract parameters, if anyone?
-12. What are the final Phase 1 acceptance criteria and who approves phase transitions?
+12. Which Phase 1 framework/package manager and repository layout are approved? See proposed `plan.md`.
+13. Who approves each phase transition?
 
 ## Change record
 
